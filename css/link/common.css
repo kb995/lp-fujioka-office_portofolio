@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Avenir", "游ゴシック体";
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  width: 100%;
+  height: 8.67188vw;
+  background: #fafafa;
+}
+
+.content {
+  margin: 0 7.8125vw;
+}
+
+.header {
+  padding: 0 7.8125vw;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .header {
+    padding: 0 2.92969vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: auto;
+  }
+}
+
+.header-logo {
+  width: 23.4375vw;
+  padding: 3.125vw 7.03125vw;
+  padding-left: 0;
+  float: left;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .header-logo {
+    width: 34.17969vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    width: 34.66667vw;
+    padding: 2.66667vw 0;
+  }
+}
+
+.header .global-menu {
+  min-width: 39.0625vw;
+  float: right;
+}
+
+@media (max-width: 480px) {
+  .header .global-menu {
+    width: 100%;
+  }
+}
+
+.header .global-menu .menu-item {
+  float: left;
+}
+
+.header .global-menu .menu-item-link {
+  font-size: 2rem;
+  color: #444;
+  font-weight: bold;
+  padding: 3.67188vw 1.01562vw;
+  display: block;
+  letter-spacing: .3rem;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .header .global-menu .menu-item-link {
+    font-size: 1.5rem;
+    padding: 3.41797vw 0.78125vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .global-menu .menu-item-link {
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    padding: 2.66667vw 2.93333vw;
+  }
+}
+
+.header .global-menu .menu-item-link:hover {
+  color: #fff;
+  background-color: #333;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.section-title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  margin-bottom: 6rem;
+  color: #A4ABB0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.buttom-container {
+  width: 100%;
+  text-align: center;
+}
+
+.buttom-container .buttom-m {
+  width: 31.25vw;
+  color: #fff;
+  font-weight: bold;
+  background-color: #364D6A;
+  border-radius: 50px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 2.5rem 7.8125vw;
+  margin: 10rem auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: inline-block;
+}
+
+.buttom-container .buttom-m:hover {
+  letter-spacing: .5rem;
+  -webkit-filter: brightness(180%);
+          filter: brightness(180%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 480px) {
+  .buttom-container .buttom-m {
+    width: 80vw;
+    font-size: 2rem;
+    padding: 2rem 18.66667vw;
+    letter-spacing: .5rem;
+    display: block;
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .buttom-container .buttom-m {
+    margin: 0 auto 12rem auto;
+  }
+}
+
+.buttom-container .buttom-l {
+  width: 39.0625vw;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  color: #fff;
+  background-color: #364D6A;
+  border: 2px solid #364D6A;
+  border-radius: 50px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 3rem 13.28125vw;
+  margin: 0 auto 10rem auto;
+  background-color: #202037;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: block;
+}
+
+.buttom-container .buttom-l:hover {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #364D6A;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 480px) and (max-width: 480px) {
+  .buttom-container .buttom-l {
+    width: 80vw;
+    font-size: 2rem;
+    padding: 2rem 18.66667vw;
+    letter-spacing: .5rem;
+    display: block;
+    margin-bottom: 10rem;
+  }
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-text {
+  width: 50%;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 480px) {
+  .contact-text {
+    width: 85%;
+    font-size: 1.5rem;
+    letter-spacing: .7rem;
+    line-height: 2;
+  }
+}
+
+.maps-wrap {
+  position: relative;
+  width: 100%;
+  height: 32.03125vw;
+  margin-bottom: 13.3rem;
+}
+
+@media (max-width: 480px) {
+  .maps-wrap {
+    height: 103.8961vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .maps-wrap {
+    height: 60vw;
+  }
+}
+
+.maps-wrap #maps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mv-container {
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .mv-container {
+    height: 90vh;
+  }
+}
+
+.mv-container .mv_top-cover {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: .5rem;
+  text-align: center;
+  line-height: 22.42188vw;
+  width: 100%;
+  height: 22.42188vw;
+  background-color: #202037;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .mv-container .mv_top-cover {
+    width: 100%;
+    height: 10vh;
+    color: #333;
+    font-weight: bold;
+    font-size: 5rem;
+    text-shadow: 3px 3px 10px #fff;
+    line-height: 10vh;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 40vw;
+    left: 0;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 12.89062vw;
+  background-color: #202037;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,352 @@
+@charset "UTF-8";
+.mv {
+  background-image: url("../../img/マスクグループ 3_mv_03.jpg");
+  width: 100%;
+  height: 51.5625vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+@media (max-width: 480px) {
+  .mv {
+    height: 80vh;
+    position: static;
+  }
+}
+
+.mv-underbox {
+  width: 80%;
+  background-color: #F2F0E8;
+  margin: 0 auto;
+  position: relative;
+  bottom: 15rem;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .mv-underbox {
+    width: 98%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .mv-underbox {
+    width: 100%;
+    text-align: center;
+    position: static;
+  }
+}
+
+.mv-underbox-title {
+  width: 39.0625vw;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  line-height: 1.5;
+  padding: 5.46875vw;
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .mv-underbox-title {
+    width: 100%;
+    font-size: 2rem;
+    float: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .mv-underbox-title {
+    font-size: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+.mv-underbox-text {
+  width: 39.0625vw;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  line-height: 2.3;
+  padding: 6.25vw 2.34375vw;
+  vertical-align: top;
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .mv-underbox-text {
+    width: 90vw;
+    font-size: 1rem;
+    line-height: 2.5;
+    float: none;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .mv-underbox-text {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0rem 2rem 5rem 2rem;
+    display: block;
+    float: none;
+  }
+}
+
+.point {
+  width: 100%;
+  padding: 8rem;
+}
+
+@media (max-width: 480px) {
+  .point {
+    text-align: center;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .point {
+    padding: 10rem 5rem;
+  }
+}
+
+.point-container_left {
+  width: 45%;
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .point-container_left {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .point-container_left {
+    width: 100%;
+    float: none;
+  }
+}
+
+.point-container_right {
+  width: 45%;
+  padding-left: 10rem;
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .point-container_right {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .point-container_right {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+}
+
+.point-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  padding-bottom: 2rem;
+}
+
+.point-title::after {
+  content: '';
+  width: 15rem;
+  border-bottom: .3rem solid #AB5683;
+  padding-top: 2.5rem;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .point-title::after {
+    width: 100%;
+  }
+}
+
+.point-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5rem 0;
+}
+
+@media (max-width: 480px) {
+  .point-subtitle {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+
+.point-text {
+  font-size: 1.4rem;
+  letter-spacing: .4rem;
+  line-height: 2;
+}
+
+@media (max-width: 480px) {
+  .point-text {
+    text-align: left;
+  }
+}
+
+.office {
+  width: 100%;
+  background-color: #F2F2F2;
+  padding: 10.15625vw 11.71875vw;
+}
+
+@media (max-width: 480px) {
+  .office {
+    padding: 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .office {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+.office-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 480px) {
+  .office-title {
+    font-size: 3rem;
+    padding: 5rem 0;
+    margin: 0 auto;
+    letter-spacing: .5rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .office-title {
+    width: 100%;
+    text-align: center;
+    padding: 10rem 4rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.office-text-container {
+  padding-right: 8.59375vw;
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .office-text-container {
+    float: none;
+    text-align: left;
+    padding: 1rem;
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .office-text-container {
+    float: none;
+    padding: 0 0 0 7rem;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.office-text {
+  font-size: 2rem;
+  font-size: bold;
+  line-height: 2.5;
+  letter-spacing: .3rem;
+}
+
+@media (max-width: 480px) {
+  .office-text {
+    font-size: 1.5rem;
+    line-height: 3;
+  }
+}
+
+.office-img-container {
+  float: left;
+  width: 34.60938vw;
+  height: 41.40625vw;
+}
+
+@media (max-width: 480px) {
+  .office-img-container {
+    width: 90%;
+    height: auto;
+    float: none;
+    margin: 0 auto 2rem auto;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .office-img-container {
+    padding-left: 4rem;
+    float: none;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .br_pc {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .br_sp {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .br_sp {
+    display: none;
+  }
+}
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,259 @@
+//====================
+// import
+//====================
+@import '../1-setting/mixin';
+@import '../1-setting/font';
+@import '../1-setting/bgColor';
+
+//====================
+// mv
+//====================
+.mv {
+  background-image: url('../../img/マスクグループ 3_mv_03.jpg');
+  width: 100%;
+  height: (660/1280)*100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  @include sp {
+    height: 80vh;
+    position: static;
+    
+  }
+}
+
+.mv-underbox {
+  width: 80%;
+  background-color: #F2F0E8;
+  margin: 0 auto;
+  position: relative;
+  bottom: 15rem;
+  z-index: 1;
+  @include sp {
+    width: 98%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  @include tab {
+    width: 100%;
+    text-align: center;
+    position: static;
+  }
+
+  &-title {
+    width: (500/1280)*100vw;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    line-height: 1.5;
+    padding: (70/1280)*100vw;
+    float: left;
+    @include sp {
+      width: 100%;
+      font-size: 2rem;
+      float: none;
+    }
+    @include tab {
+      font-size: 3rem;
+      width: 80%;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+  &-text {
+    width: (500/1280)*100vw;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: .3rem;
+    line-height: 2.3;
+    padding: (80/1280)*100vw (30/1280)*100vw;
+    vertical-align: top;
+    float: left;
+    @include sp {
+      width: 90vw;
+      font-size: 1rem;
+      line-height: 2.5;
+      float: none;
+      display: inline-block;
+    }
+    @include tab {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0rem 2rem 5rem 2rem;
+      display: block;
+      float: none;
+    }
+  }
+}
+
+.point {
+  width: 100%;
+  padding: 8rem;
+  @include sp {
+    text-align: center;
+    padding: 3rem;
+  }
+  @include tab {
+    padding: 10rem 5rem;
+  }
+  
+  &-container_left {
+    width: 45%;
+    float: left;
+    @include sp {
+      width: 100%;
+      float: none;
+    }
+    @include tab {
+      width: 100%;
+      float: none;
+    }
+  }
+  &-container_right {
+    width: 45%;
+    padding-left: 10rem;
+    float: left;
+    @include sp {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
+    @include tab {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
+  }
+  
+    &-title {
+      font-size: 3.6rem;
+      font-weight: bold;
+      letter-spacing: 1rem;
+      padding-bottom: 2rem;
+      &::after {
+        content: '';
+        width: 15rem;
+        border-bottom: .3rem solid #AB5683;
+        padding-top: 2.5rem;
+        display: block;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+    &-subtitle {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 5rem 0;
+      @include sp {
+        font-size: 1.5rem;
+        line-height: 2;
+      }
+    }
+    &-text {
+      font-size: 1.4rem;
+      letter-spacing: .4rem;
+      line-height: 2;
+      @include sp {
+        text-align: left;
+      }
+    }
+}
+
+.office {
+  width: 100%;
+  background-color: #F2F2F2;
+  padding: (130/1280)*100vw (150/1280)*100vw;
+  @include sp {
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  &-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    padding-bottom: 5rem;
+    @include sp {
+      font-size: 3rem;
+      padding: 5rem 0;
+      margin: 0 auto;
+      letter-spacing: .5rem;
+      order: 1;
+    }
+    @include tab {
+      width: 100%;
+      text-align: center;
+      padding: 10rem 4rem;
+      order: 1;
+    }
+  }
+
+  &-text-container {
+    padding-right: (110/1280)*100vw;
+    float: left;
+    @include sp {
+      float: none;
+      text-align: left;
+      padding: 1rem;
+      margin: 0 auto;
+      order: 3;
+    }
+    @include tab {
+      float: none;
+      padding: 0 0 0 7rem;
+      order: 3;
+    }
+  }
+  &-text {
+    font-size: 2rem;
+    font-size: bold;
+    line-height: 2.5;
+    letter-spacing: .3rem;
+    @include sp {
+      font-size: 1.5rem;
+      line-height: 3;
+    }
+  }
+
+  &-img-container {
+    float: left;
+    width: (443/1280)*100vw;
+    height: (530/1280)*100vw;
+    @include sp {
+      width: 90%;
+      height: auto;
+      float: none;
+      margin: 0 auto 2rem auto;
+      order: 2;
+    }
+    @include tab {
+      padding-left: 4rem;
+      float: none;
+      order: 2;
+    }
+  }
+}
+
+@include sp {
+  .br_pc {
+    display: none;
+  }
+}
+@include tab {
+  .br_sp {
+    display: none;
+  }
+}
+@include pc {
+  .br_sp {
+    display: none;
+  }
+}

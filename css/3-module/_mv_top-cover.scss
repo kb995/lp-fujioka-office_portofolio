@@ -1,0 +1,32 @@
+.mv-container {
+  position: relative;
+  @include sp {
+    height: 90vh;
+  }
+
+  .mv_top-cover {
+    font-size: 5rem;
+    font-weight: bold;
+    color: $font-color_white;
+    letter-spacing: .5rem;
+    text-align: center;
+    line-height: (287/1280)*100vw;
+    width: 100%;
+    height: (287/1280)*100vw;
+    background-color: $bg-color_mv-cover;
+    display: inline-block;
+    @include sp {
+      width: 100%;
+      height: 10vh;
+      color: $font-color_default;
+      font-weight: bold;
+      font-size: 5rem;
+      text-shadow: 3px 3px 10px #fff;	
+      line-height: 10vh;
+      background-color: rgba(0,0,0,0);
+      position: absolute;
+      top: (150/375)*100vw;
+      left: 0;
+    }
+  }
+}

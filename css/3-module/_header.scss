@@ -1,0 +1,59 @@
+
+.header {
+  padding: 0 (100/1280)*100vw;
+  @include tab {
+    padding: 0 (30/1024)*100vw;
+  }
+  @include sp {
+    height: auto;
+  }
+  &-logo {
+    width: (300/1280)*100vw;
+    padding: (40/1280)*100vw (90/1280)*100vw;
+    padding-left: 0;
+    float: left;
+    @include tab {
+      width: (350/1024)*100vw;
+    }
+    @include sp {
+      width: (130/375)*100vw;
+      padding: (10/375)*100vw 0;
+    }
+  }
+
+  .global-menu {
+    min-width: (500/1280)*100vw;
+    float: right;
+    @include sp {
+      width: 100%;
+    }
+
+    .menu {
+      &-item {
+         float: left;
+          &-link {
+            font-size: 2rem;
+            color: #444;
+            font-weight: bold;
+            padding: (47/1280)*100vw (13/1280)*100vw;
+            display: block;
+            letter-spacing: .3rem;
+            @include tab {
+              font-size: 1.5rem;
+              padding: (35/1024)*100vw (10/1280)*100vw;
+            }
+            @include sp {
+              font-size: 1.2rem;
+              letter-spacing: .1rem;
+              padding: (10/375)*100vw (11/375)*100vw;
+            }
+            &:hover {
+              color: #fff;
+              background-color: #333;
+              transition: .5s;
+            }
+        }
+      }
+    }
+  }
+}

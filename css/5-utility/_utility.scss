@@ -1,0 +1,14 @@
+//====================
+// utility
+//====================
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.hide-text {
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}

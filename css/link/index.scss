@@ -1,0 +1,489 @@
+/* TODO
+◯ フォント変更
+◯ mv グラデーション
+◯ googlemap APIで埋め込み
+◯ googlemap ピン　
+◯ ボタン修正
+◯ ボタン内テキスト折り返さない
+◯ 共通用cssのリンク
+◯ mv 位置中央,繰り返しなし
+◯ contactボタンテキスト
+◯ ブログテキスト
+◯ width 相対値に見直し
+◯ mv スライダー
+◯ mixinでmq作るsp,tab
+◯ service タグ 位置調整
+◯ service this使って書き換え
+◯ ポタンのマウスオーバー
+◯ navのマウスオーバー
+◯ リンクをナビから貼る
+◯ ロゴsvg書き出し,トップページへ遷移
+◯ about, html 高さ設定しない
+◯ 余分なheight削除全部
+◯ content クラス
+◯ index,タグ中央に
+◯ blog-card, html 修正
+◯ blog-card-imgのサイズ可変
+◯ Lintエラー修正
+◯ mixin機能させる
+◯ レスポンシブ,カラム変更
+◯ レスポンシブ,ヘッダー修正
+◯ レスポンシブ,mv
+// aboutPage
+◯ ページ共通部
+◯ mv,mv-cover
+◯ point
+◯ point 下線afrer
+◯ office
+// servicePage
+◯ ページ共通部
+◯ service-card
+//pricePage
+◯ 共通部
+◯ テーブル
+◯ indexレスポンシブ化(sp)
+◯ aboutレスポンシブ化(sp)
+◯ serviceレスポンシブ化(sp)
+◯ priceレスポンシブ化(sp)
+◯ indexレスポンシブ化(tab)
+◯ aboutレスポンシブ化(tab)
+◯ serviceレスポンシブ化(tab)
+◯ priceレスポンシブ化(tab)
+◯ 見出し太字
+◯ headerナビ挙動修正
+◯ 100vw=>100%
+◯ svg
+◯ レスポンシブbrクラス
+◯ レスポンシブ,テキスト改行
+◯ vwのカラム落ち再調整
+◯ price-title
+◯ マウスアクション同じに
+◯ serviceのずれ
+◯ 共通色を変数にまとめる
+◯ SEOタグ
+- mixin二重
+
+
+*/
+
+/* 質問
+
+*/
+
+//====================
+// import
+//====================
+// @import '../1-setting/mixin';
+// @import '../1-setting/font';
+// @import '../1-setting/bgColor';
+
+//====================
+// mv
+//====================
+.mv {
+  position: relative;
+  width: 100%;
+  height: (750/1280)*100vw;
+  z-index: 0;
+  @include sp {
+    height: 80vh;
+  }
+
+  .swiper-slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+  }
+  &-title {
+    font-size: (45/1280)*100vw;
+    color: $font-color_white;
+    font-weight: bold;
+    letter-spacing: .7rem;
+    line-height: 1.5;
+    position: absolute;
+    top: (248/1280)*100vw;
+    left: (131/1280)*100vw;
+    z-index: 1;
+    @include sp {
+      font-size: 2.5rem;
+      letter-spacing: .3rem;
+      position: absolute;
+      top: (200/375)*100vw;
+      left: (30/375)*100vw;
+
+    }
+  }
+  &-subtitle {
+    font-size: 2rem;
+    color: $font-color_white;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: (420/1280)*100vw;
+    left: (131/1280)*100vw;
+    z-index: 1;
+    @include sp {
+      font-size: 1.3rem;
+      font-weight: normal;
+      letter-spacing: .4rem;
+      line-height: 2;
+      position: absolute;
+      top: (300/375)*100vw;
+      left: (30/375)*100vw;
+    }
+    @include tab {
+      font-size: 1.5rem;
+      top: (350/1024)*100vw;
+    }
+  }
+}
+
+.box-container {
+  font-size: 0;
+  position: relative;
+  top: -(140/1280)*100vw;
+  z-index: 1;
+  @include sp {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include tab {
+    position: static;
+  }
+
+  .left-box {
+    width: 50vw;
+    background: linear-gradient(top, #354d69 0%, #344c66 1%, #364d6c 1%, #354d69 1%, #374e6d 2%, #354c6b 2%, #37506e 3%, #374e6d 3%, #395270 8%, #365470 8%, #39546f 9%, #395374 10%, #3a5572 10%, #3b5674 11%, #395472 11%, #3a5874 11%, #3b5674 12%, #3a5872 13%, #3a5775 13%, #3a5976 16%, #3c5b78 17%, #3c5977 17%, #3c5b7a 17%, #3e5d7a 20%, #3a5b7a 20%, #3f5e7b 20%, #3c5d7c 21%, #3f6383 28%, #406381 29%, #406484 29%, #406484 30%, #406580 30%, #406484 30%, #416887 33%, #3f6685 34%, #426988 34%, #426988 37%, #446b8c 37%, #426b89 38%, #446d8d 40%, #446d89 41%, #446c8f 41%, #446f8f 42%, #426d8d 42%, #457090 43%, #447190 46%, #467394 47%, #467390 48%, #467295 48%, #467392 49%, #477495 49%, #487697 51%, #467495 51%, #497798 51%, #477898 54%, #4a7899 54%, #4a7b99 58%, #4a7a9e 58%, #4a7d9c 59%, #497b9c 60%, #4b7d9e 60%, #4c7e9f 61%, #4a7c9d 62%, #4d7fa0 62%, #4a7f9f 63%, #4d7fa0 63%, #4c81a1 65%, #4a7f9f 65%, #4d82a2 65%, #4c82a4 68%, #4f84a6 69%, #4e84a6 71%, #5088a9 73%, #4e86a7 74%, #5189aa 74%, #5088a9 75%, #5189ac 75%, #518aa8 75%, #5189ae 76%, #4f8aaa 77%, #528aad 77%, #508bab 78%, #518cae 78%, #518cac 79%, #538fb1 82%, #518daf 82%, #5490b2 83%, #5490b4 85%, #5293b3 86%, #5690b6 86%, #5392b3 87%, #5392b5 88%, #5594b7 88%, #5595b8 93%, #5797ba 93%, #5698ba 94%, #5599be 94%, #5797ba 95%, #5999bd 95%, #5998bb 95%, #589abd 96%, #5698bb 96%, #599bbd 97%, #589cbf 100%); 
+    padding: (80/1280)*100vw;
+    display: inline-block;
+    vertical-align: bottom;
+    z-index: 1;
+    @include sp {
+      width: 100%;
+      display: block;
+      background: $bg-color_white;
+      order: 2;
+    }
+   @include tab {
+     width: 100%;
+     display: block;
+   }
+    &-title {
+      width: (450/1280)*100vw;
+      font-size: 2rem;
+      color: $font-color_white;
+      font-weight: bold;
+      line-height: 1.5;
+      letter-spacing: .4rem;
+      padding-bottom: (30/1280)*100vw;
+      @include sp {
+        width: 100%;
+        font-size: 2.2rem;
+        color: $font-color_default;
+        margin: 5rem auto;
+        letter-spacing: .1rem;
+        line-height: 2;
+      }
+      @include tab {
+        width: 80%;
+        margin: 2rem auto;
+      }
+    }
+    &-text {
+      font-size: 1.6rem;
+      color: $font-color_white;
+      line-height: 2;
+      letter-spacing: .4rem;
+      @include sp {
+        color: $font-color_default;
+        font-size: 1.2rem;
+      }
+      @include tab {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  .right-box {
+    width: 50vw;
+    background-color: $bg-color_white;
+    border: 15px solid #364D6A;
+    padding: (87/1280)*100vw (48/1280)*100vw (100/1280)*100vw;
+    display: inline-block;
+    vertical-align: bottom;
+    z-index: 1;
+    @include sp {
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+      border: none;
+      border-bottom: 10px solid #364D6A;
+      order: 1;
+    }
+    @include tab {
+      width: 100%;
+      padding: 7rem 4rem;
+      margin: 0 auto 8rem auto;
+      border: none;
+      border-top: 1rem solid #364D6A;
+      border-bottom: 1rem solid #364D6A;
+      display: block;
+
+    }
+    
+    &-title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #364D6A;
+      letter-spacing: .2rem;
+      text-align: center;
+      padding-bottom: (61/1280)*100vw;
+      z-index: 2;
+      @include sp {
+        width: 100%;
+        color: #364D6A;
+        text-align: left;
+        float: left;
+      }
+      @include tab {
+        float: left;
+        padding: 0 4rem;
+
+      }
+    }
+    &-time {
+      font-size: 1.6rem;
+      color: #1c1c1c;
+      padding-right: (30/1280)*100vw;
+      padding-top: .6rem;
+      float: left;
+      z-index: 2;
+      @include sp {
+        color: #1C1C1C;
+        float: left;
+      }
+    }
+    &-text {
+      width: (360/1280)*100vw;
+      font-size: 1.6rem;
+      color: #1c1c1c;
+      line-height: 1.5;
+      float: left;
+      z-index: 2;
+      @include sp {
+        width: 70%;
+        font-size: 1.2rem;
+        float: right;
+      }
+      @include tab {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+//====================
+// service
+//====================
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include sp {
+    display: block;
+  }
+  
+
+  &-card {
+    width: (328/1280)*100vw;
+    position: relative;
+    $this: &;
+    @include sp {
+      width: 100%;
+    }
+    @include tab {
+      width: 33%;
+    }
+
+    .service-img-container {
+      width: (328/1280)*100vw;
+      margin-bottom: 5rem;
+      text-align: center;
+      @include sp {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include tab {
+        width: 77%;
+      }
+
+      #{$this}-img {
+        width: (328/1280)*100vw;
+        object-fit: cover;
+        @include sp {
+          width: 100%;
+        }
+      }
+
+      #{$this}-tag {
+        width: 20.625vw;
+        font-size: 0;
+        white-space: nowrap;
+        display: inline-block;
+        position: relative;
+        bottom: 3rem;
+        z-index: 1;
+        @include sp {
+          width: (600/1280)*100vw;
+          left: -3rem;
+        }
+        
+      #{$this}-tag_no {
+          font-size: 2rem;
+          background-color: #2C334B;
+          color: $font-color_white;
+          border: 3px solid #2C334B;
+          letter-spacing: .3rem;
+          padding: 1rem 1rem;
+          display: inline-block;
+          @include sp {
+            width: (250/1280)*100vw;
+          }
+          @include tab {
+            font-size: 1.5rem;
+          }
+        }
+      #{$this}-tag_name {
+          width: (200/1280)*100vw;
+          font-size: 2rem;
+          color: #212138;
+          font-weight: bold;
+          background-color: $bg-color_white;
+          border: 3px solid #2C334B;
+          padding: 1rem (60/1280)*100vw;
+          display: inline-block;
+          @include sp {
+            width: (600/1280)*100vw;
+          }
+          @include tab {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &-text {
+      width: (330/1280)*100vw;
+      color: $font-color_light;
+      font-weight: bold;
+      letter-spacing: .3rem;
+      line-height: 1.5;
+      text-align: left;
+      @include sp {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
+      @include tab {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include tab {
+  .content {
+    margin: 0 (50/1024)*100vw;
+  }
+}
+
+.buttom-m {
+  margin: 5rem auto 18rem auto;
+}
+
+//====================
+// blog
+//====================
+.blog {
+
+  .blog-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .blog-card {
+      width: (335/1280)*100vw;
+      @include sp {
+        width: (150/375)*100vw;
+      }
+      @include tab {
+        width: (290/1024)*100vw;
+      }
+
+      &-img {
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+        object-fit: cover;
+      }
+      &-title {
+        font-size: 2rem;
+        color: #5B5C5C;
+        font-weight: bold;
+        letter-spacing: .3rem;
+        margin: 2.8rem 0;
+        @include sp {
+          font-size: 1.5rem;
+        }
+      }
+      &-text {
+        width: 100%;
+        color: $font-color_light;
+        line-height: 2;
+        letter-spacing: .3rem;
+        margin-bottom: 7.8rem;
+        @include sp {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+        @include tab {
+          font-size: 1.5rem;
+          letter-spacing: .1rem;
+        }
+      }
+    }
+  }
+  .buttom-m {
+    margin: 13rem auto 17rem auto;
+    @include sp {
+      margin: 0 auto 10rem auto;
+    }
+    @include tab {
+      margin: 0 auto 15rem auto;
+    }
+  }
+
+}
+
+@include sp {
+  .br_pc {
+    display: none;
+  }
+}
+@include tab {
+  .br_sp {
+    display: none;
+  }
+}
+@include pc {
+  .br_sp {
+    display: none;
+  }
+}

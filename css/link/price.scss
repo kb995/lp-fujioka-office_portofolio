@@ -1,0 +1,190 @@
+//====================
+// import
+//====================
+@import '../1-setting/mixin';
+@import '../1-setting/font';
+@import '../1-setting/bgColor';
+
+
+//====================
+// mv
+//====================
+.mv-container {
+  position: static;
+  @include sp {
+    height: auto;
+  }
+
+  .mv_top-cover {
+    position: static;
+    font-weight: bold;
+    display: inline-block;
+    @include sp {
+      font-size: 3rem;
+      color: $font-color_white;
+      background-color: #333;
+      text-shadow: 1px 1px 5px #fff;
+    }
+
+  }
+}
+
+.price-inner {
+  padding: 0 (30/1280)*100vw;
+  margin-bottom: 20rem;
+  @include sp {
+    padding: 0 2rem;
+  }
+}
+
+//====================
+// nav
+//====================
+.price-global-nav {
+  border-bottom: 3px solid #979797;
+  margin-bottom: 10rem;
+  @include sp {
+    margin-bottom: 6rem;
+  }
+
+  .price-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .price-tag-link {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color:#212138;
+      letter-spacing: .3rem;
+      padding: 4rem 14rem;
+      display: inline-block;
+      text-align: center;
+      @include sp {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+      }
+      @include tab {
+        padding: 2rem 6rem;
+      }
+        &:hover {
+          background-color: #eee;
+      }
+    }
+  }
+}
+
+//====================
+// table
+//====================
+.price {
+  $this : &;
+
+  .price-table-title-container {
+    width: 100%;
+    background-color: $bg-color_mv-cover;
+    border: none;
+    margin-bottom: 8rem;
+
+    #{$this}-table-title_no {
+      font-size: 2.4rem;
+      color: $font-color_white;
+      letter-spacing: .3rem;
+      padding: 2rem;
+      display: inline-block;
+      @include sp {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+    }
+    #{$this}-table-title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      background-color: $bg-color_white;
+      border: none;
+      letter-spacing: .3rem;
+      padding: 2rem 4rem;
+      display: inline-block;
+      @include sp {
+        font-size: 2rem;
+        padding: 2rem;
+      }
+    }
+  }
+
+  #{$this}-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    @include sp {
+      font-size: 2rem;
+      
+    }
+  }
+  #{$this}-text {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 5rem;
+    @include sp {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+  }
+}
+
+   .price-table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15rem;
+    @include sp {
+      margin: 9rem 0;
+    }
+  
+    &-title {
+      th {
+        border-bottom: 10px solid #000;
+        padding-bottom: 2rem;
+      }
+    }
+  
+    td {
+      width: 30%;
+      height: 5rem;
+      line-height: 5rem;
+      padding: .1px 4rem;
+      border: 1px solid #979797;
+  
+      &:first-child {
+        width: 50%;
+        background-color: #F2F2F2;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+      &:nth-child(3) {
+        width: 30%;
+      }
+    }
+  }
+
+  @include sp {
+    .br_pc {
+      display: none;
+    }
+  }
+  @include tab {
+    .br_sp {
+      display: none;
+    }
+  }
+  @include pc {
+    .br_sp {
+      display: none;
+    }
+  }
+  
+
+
+

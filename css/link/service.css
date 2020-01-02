@@ -1,0 +1,245 @@
+@charset "UTF-8";
+.mv-container {
+  position: static;
+}
+
+@media (max-width: 480px) {
+  .mv-container {
+    position: relative;
+    height: 50vh;
+    margin-bottom: 10rem;
+  }
+}
+
+.mv-container .mv_top-cover {
+  position: static;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .mv-container .mv_top-cover {
+    position: absolute;
+    top: 18.66667vw;
+  }
+}
+
+.mv-container .mv {
+  background-image: url("../../img/グループ 218.jpg");
+  width: 100%;
+  height: 58.59375vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  .mv-container .mv {
+    height: 60vh;
+    background-position-x: 35%;
+  }
+}
+
+.service {
+  width: 100%;
+  border: 1.17vw solid #F2F0E8;
+  padding: 11.71875vw 5.46875vw 7.8125vw;
+  margin-bottom: 13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .service {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+  }
+}
+
+.service .service-intro-container {
+  width: 35.15625vw;
+  float: left;
+  margin: 0 7.8125vw 15rem 0;
+}
+
+@media (max-width: 480px) {
+  .service .service-intro-container {
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .service .service-intro-container {
+    width: 100%;
+    margin-bottom: 10rem;
+    float: none;
+  }
+}
+
+.service .service-intro-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  padding: 2rem 4rem;
+  margin-bottom: 5rem;
+  display: inline-block;
+}
+
+.service .service-intro-num {
+  font-size: 2.4rem;
+  color: #fff;
+  letter-spacing: .3rem;
+  background-color: #202037;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  display: inline-block;
+}
+
+.service .service-intro-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #888;
+  line-height: 2.5;
+  letter-spacing: .3rem;
+}
+
+@media (max-width: 480px) {
+  .service .service-intro-text {
+    letter-spacing: .1rem;
+  }
+}
+
+.service .service-list-container {
+  width: 39.0625vw;
+  background-color: #F2F0E8;
+  padding: 5.46875vw;
+  margin: 0 0 15rem 0;
+  float: left;
+}
+
+@media (min-width: 1024px) {
+  .service .service-list-container:last-of-type {
+    position: relative;
+    left: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service .service-list-container {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    background-color: #F2F0E8;
+    display: block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .service .service-list-container {
+    width: 100%;
+    float: none;
+  }
+}
+
+.service .service-list-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #202037;
+  letter-spacing: .3rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .service .service-list-title {
+    font-size: 1.5rem;
+    padding-top: 6rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .service .service-list-title {
+    font-size: 2.5rem;
+  }
+}
+
+.service .service-list-text {
+  font-size: 1.4rem;
+  font-size: bold;
+  color: #888;
+  line-height: 3;
+}
+
+.service .service-list-text:last-of-type {
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 480px) {
+  .service .service-list-text {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .service .service-list-text {
+    font-size: 2.5rem;
+    padding-left: 10rem;
+  }
+}
+
+.service .buttom-container .buttom-m {
+  width: 22vw;
+  padding: 2rem 1.5625vw;
+  background-color: #202037;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .service .buttom-container .buttom-m {
+    width: 90%;
+    margin: 0 auto 3rem auto;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .service .buttom-container .buttom-m {
+    width: 60%;
+  }
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #C7C6C3;
+  padding: 0 3rem;
+}
+
+@media (max-width: 480px) {
+  .br_pc {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .br_sp {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .br_sp {
+    display: none;
+  }
+}
+/*# sourceMappingURL=service.css.map */

@@ -1,0 +1,68 @@
+
+.buttom-container {
+  width: 100%;
+  text-align: center;
+  .buttom-m {
+    width: (400/1280)*100vw;
+    color: $font-color_white;
+    font-weight: bold;
+    background-color: #364D6A;
+    border-radius: 50px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 2.5rem (100/1280)*100vw;
+    margin: 10rem auto;
+    transition: 1s;
+    display: inline-block;
+    &:hover {
+      letter-spacing: .5rem;
+      filter: brightness(180%);
+      transition: 1s;
+    }
+    @include sp {
+      width: (300/375)*100vw;
+      font-size: 2rem;
+      padding: 2rem (70/375)*100vw;
+      letter-spacing: .5rem;
+      display: block;
+      margin-bottom: 10rem;
+    }
+    @include tab {
+      margin: 0 auto 12rem auto;
+
+    }
+  }
+  .buttom-l {
+    width: (500/1280)*100vw;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    color: $font-color_white;
+    background-color: #364D6A;
+    border:2px solid #364D6A;
+    border-radius: 50px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 3rem (170/1280)*100vw;
+    margin: 0 auto 10rem auto;
+    background-color: #202037;
+    transition: .5s;
+    display: block;
+    &:hover {
+      color: #333;
+      background-color: $bg-color_white;
+      border:2px solid #364D6A;
+      transition: .5s;
+    }
+    @include sp {
+      @include sp {
+        width: (300/375)*100vw;
+        font-size: 2rem;
+        padding: 2rem (70/375)*100vw;
+        letter-spacing: .5rem;
+        display: block;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+}
